@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Lab1}/{action=ThirdViewMethod}/{id?}");
+    pattern: "{controller=Lab1}/{action=CustomViewMethod}/{id?}");
 
 app.Run();

@@ -29,5 +29,25 @@ namespace Web_Programming.Controllers
         {
             return View(GetItemsList().OrderBy(x => x).ToList());
         }
+        public List<string> GetCustomItemsList()
+        {
+            List<string> languages = new List<string>();
+
+            languages.Add("C++");
+            languages.Add("Python");
+            languages.Add("JavaScript");
+            languages.Add("Pascal");
+            languages.Add("Java");
+            languages.Add("Go");
+
+            return languages;
+        }
+
+        public IActionResult CustomViewMethod()
+        {
+            // Получаем отсортированный список по длине строки
+            //List<string> languages = GetCustomItemsList();
+            return View(GetCustomItemsList().OrderBy(x => x.Length).ToList());
+        }
     }
 }
